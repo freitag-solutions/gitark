@@ -1,0 +1,6 @@
+#!/bin/sh
+
+for r in $(git remote); do 
+	echo "SYNC: pushing to '$r'"
+	git push $r master;
+done
