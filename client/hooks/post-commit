@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for r in $(git remote); do 
+	echo "SYNC: pushing to '$r'"
+	git push --all "$r" 2>&1 | sed "s/^/    /"
+done
+
